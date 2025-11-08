@@ -19,7 +19,10 @@ Execute Epic [EPIC_NUMBER]
 - Generate necessary context
 - Implement features
 - Run tests and validations
+- **Continue to the next story without stopping**
 - Track progress through completion
+
+**Important:** The workflow runs **continuously** through all stories. It will not pause or wait for confirmation between stories—only for critical blockers.
 
 ### How It Works
 
@@ -41,7 +44,7 @@ The prompt executes a structured 8-step workflow **per story**:
 5. **Review** - Performs code review, fixes critical issues
 6. **Validation Guide** - Creates detailed testing documentation (REQUIRED gate)
 7. **Verify Complete** - Gate check ensuring all criteria met before proceeding
-8. **Mark Done** - Updates status to `done`, commits changes, reports progress
+8. **Mark Done** - Updates status to `done`, commits changes, reports progress, **immediately continues to next story**
 
 #### Story State Flow
 
@@ -108,7 +111,7 @@ The workflow will:
 
 ### Progress Tracking
 
-After each story completion, you'll see:
+After each story completion, you'll see a progress report before the workflow **automatically continues to the next story**:
 
 ```
 ✅ Story [ID] done
@@ -116,6 +119,8 @@ Progress: [X/Y] stories ([Z]%)
 Token Usage: [used]/200k
 Next: Story [NEXT_ID]
 ```
+
+**Note:** The workflow does **not** stop after this report. It immediately begins working on the next story.
 
 ### Epic Completion
 
@@ -138,6 +143,7 @@ Ready for Epic [N+1]
 ### Key Features
 
 ✅ **Fully Autonomous** - Runs complete epics without constant supervision
+✅ **Continuous Execution** - Works through all stories without stopping between them
 ✅ **Self-Healing** - Auto-fixes common issues (linting, imports, types, flaky tests)
 ✅ **Structured Gates** - Validation guides prevent premature completion
 ✅ **Session Recovery** - Handoff system enables pause/resume across sessions
@@ -173,8 +179,8 @@ Execute Epic 5
 # - Generate context
 # - Implement with tests
 # - Create validation guide
-# - Move to next story
-# - Continue until all stories complete
+# - Move to next story WITHOUT STOPPING
+# - Continue autonomously until all stories complete
 
 # If interrupted or tokens run high:
 Resume Epic 5 from handoff
