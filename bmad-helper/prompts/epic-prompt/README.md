@@ -2,7 +2,7 @@
 
 > **⚠️ Work in Progress**
 >
-> This is a personal workflow I'm developing to execute epics faster. I'm still learning about BMAD (Business Model and Design) methodology and actively experimenting to discover what works best. This workflow is evolving as I learn and iterate on my process.
+> This is a personal workflow I'm developing to execute epics faster. I'm still learning about BMAD (Breakthrough Method for Agile AI-Driven Development) methodology and actively experimenting to discover what works best. This workflow is evolving as I learn and iterate on my process.
 
 The epic workflow prompt (`bmad-helper/prompts/epic-prompt.md`) is an autonomous AI agent workflow for executing complete epics from start to finish with minimal human intervention.
 
