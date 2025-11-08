@@ -221,12 +221,12 @@ Provide file path of epic-prompt.md which is in a common non-project directory, 
 Resume Epic 5 from handoff following epic-prompt.md
 ```
 
-### Best Practices
+### Strategy
 
 1. **Trust the Workflow** - Let it handle common issues autonomously
-2. **Review Validation Guides** - These are your proof of completion
-3. **Use Handoffs** - Don't fight token limits, embrace the handoff system
-4. **Check Progress Reports** - Stay informed without micromanaging
+2. **Review Validation Guides** - These are for your manual validation
+3. **Use Handoffs** - Handoffs are meant to pre-emptively prepare and be ready for compaction.
+4. **Check Progress Reports** - Stay informed without needing to be present all the time.
 5. **Interrupt Only for Blockers** - Let auto-fix handle routine issues
 
 ## Contributing
