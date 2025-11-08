@@ -4,10 +4,10 @@ The epic workflow prompt (`bmad-helper/prompts/epic-prompt.md`) is an autonomous
 
 ### Quick Start
 
-To execute an epic, simply provide the epic ID:
+To execute an epic, provide the epic ID and prompt file:
 
 ```
-Execute Epic [EPIC_ID]
+Execute Epic [EPIC_ID] using epic-prompt.md
 ```
 
 **That's it!** The workflow will automatically:
@@ -127,7 +127,7 @@ When token usage exceeds 190k, the workflow automatically:
 To continue from a handoff:
 
 ```
-Resume Epic [EPIC_ID] from handoff
+Resume Epic [EPIC_ID] from handoff using epic-prompt.md
 ```
 
 The workflow will:
