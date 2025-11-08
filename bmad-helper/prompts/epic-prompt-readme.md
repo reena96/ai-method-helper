@@ -1,7 +1,3 @@
-# AI Method Helper
-
-A collection of AI-powered workflow prompts for automating software development tasks.
-
 ## Epic Workflow Prompt
 
 The epic workflow prompt (`bmad-helper/prompts/epic-prompt.md`) is an autonomous AI agent workflow for executing complete epics from start to finish with minimal human intervention.
@@ -169,20 +165,22 @@ docs/
 
 ### Example Usage
 
-```bash
-# Start an epic
+**Start an epic:**
+```
 Execute Epic 5
+```
 
-# The workflow will:
-# - Create branch epic-5
-# - Find first story in backlog
-# - Generate context
-# - Implement with tests
-# - Create validation guide
-# - Move to next story WITHOUT STOPPING
-# - Continue autonomously until all stories complete
+**The workflow will:**
+- Create branch epic-5
+- Find first story in backlog
+- Generate context
+- Implement with tests
+- Create validation guide
+- Move to next story WITHOUT STOPPING
+- Continue autonomously until all stories complete
 
-# If interrupted or tokens run high:
+**If interrupted or tokens run high:**
+```
 Resume Epic 5 from handoff
 ```
 
