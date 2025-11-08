@@ -1,11 +1,11 @@
-Checkout a branch off of main for this epic and name the branch the same name as the epic.
-Sharded epics are numberedin docs/epics folder - epic-x-*.md. Execute Epic [EPIC_NUMBER] autonomously until complete. Handle all standard issues automatically. Only interrupt for critical blockers.
+Checkout a branch off of main for this epic and name the branch: epic-[EPIC_ID]-[EPIC_NAME]
+Sharded epics are numbered in docs/epics folder - epic-[EPIC_ID]-*.md. Execute Epic [EPIC_ID] autonomously until complete. Handle all standard issues automatically. Only interrupt for critical blockers.
 
 ⚠️ AUTONOMOUS MODE: Work continuously through ALL stories without stopping between them. Report progress after each story but IMMEDIATELY continue to the next. DO NOT wait for user confirmation after story completion.
 
-  EPIC: Epic [EPIC_NUMBER] - [EPIC_NAME]
+  EPIC: Epic [EPIC_ID] - [EPIC_NAME]
   SPRINT STATUS: docs/sprint-status.yaml
-  HANDOFF FILE: docs/handoff/epic[N]_handoff.md
+  HANDOFF FILE: docs/handoff/epic[EPIC_ID]_handoff.md
   STORIES: [STORY_IDS]
 
   WORKFLOW PER STORY:
@@ -24,7 +24,7 @@ Sharded epics are numberedin docs/epics folder - epic-x-*.md. Execute Epic [EPIC
   4. Implement
      - /BMad:bmm:workflows:dev-story (story [STORY_ID])
      - Write tests, implement features, handle edge cases
-     - Auto-fix: test failures (1 retry), linting, imports, types
+     - Auto-fix: test failures (retry 3x), linting, imports, types
 
   5. Review
      - /BMad:bmm:workflows:code-review (story [STORY_ID])
@@ -32,8 +32,8 @@ Sharded epics are numberedin docs/epics folder - epic-x-*.md. Execute Epic [EPIC
      - Update sprint-status.yaml: in-progress → review
 
   6. Validation Guide (REQUIRED - do not skip)
-     - ⚠️ BLOCKER: Must create validation guide before proceeding to step 8
-     - Create docs/validation/epic[N]_[STORY_ID]_validation.md with:
+     - ⚠️ BLOCKER: Must create validation guide before marking story done
+     - Create docs/validation/epic[EPIC_ID]_[STORY_ID]_validation.md with:
        * 30-second quick test
        * Automated test results (unit, integration, coverage)
        * Manual steps (exact commands, API calls, chat prompts)
@@ -42,7 +42,7 @@ Sharded epics are numberedin docs/epics folder - epic-x-*.md. Execute Epic [EPIC
        * Acceptance criteria checklist
 
   7. Verify Complete (GATE CHECK - verify all items)
-     - ✅ Validation guide created (docs/validation/epic[N]_[STORY_ID]_validation.md exists)
+     - ✅ Validation guide created (docs/validation/epic[EPIC_ID]_[STORY_ID]_validation.md exists)
      - ✅ All tests passing
      - ✅ All acceptance criteria met
      - ✅ No critical TODOs
@@ -50,7 +50,7 @@ Sharded epics are numberedin docs/epics folder - epic-x-*.md. Execute Epic [EPIC
 
   8. Mark Done (only after step 7 passes)
      - Update sprint-status.yaml: review → done
-     - Report: Story [STORY_ID] complete | Files: [list] | Tests: [pass/fail] | Coverage: [%] | Progress: [X/Y]
+     - Report: Story [STORY_ID] complete | Files: [list] | Tests: [pass/fail] | Coverage: [PERCENTAGE]% | Progress: [COMPLETED_COUNT]/[TOTAL_STORIES]
      - Commit relevant changes to the branch locally.
      - ⚠️ DO NOT STOP. DO NOT ASK FOR CONFIRMATION. Immediately proceed to next story.
 
@@ -65,20 +65,20 @@ Sharded epics are numberedin docs/epics folder - epic-x-*.md. Execute Epic [EPIC
 
   When token usage > 190k:
 
-  Create/update docs/handoff/epic[N]_handoff.md:
+  Create/update docs/handoff/epic[EPIC_ID]_handoff.md:
 
   ```markdown
-  # Epic [N] Handoff - Session [X] - [TIMESTAMP]
+  # Epic [EPIC_ID] Handoff - Session [SESSION_NUMBER] - [TIMESTAMP]
 
-  ## Progress: [X/Y] stories complete
+  ## Progress: [COMPLETED_COUNT]/[TOTAL_STORIES] stories complete
 
   Completed: [list with ✓]
-  Current: Story [ID] at step [N]/8
+  Current: Story [STORY_ID] at step [STEP_NUMBER]/8
   Remaining: [list]
 
-  ## Current Story: [ID]
-  Step: [N]/8 - [step name]
-  Files: docs/stories/[ID]-*.md, .context.xml
+  ## Current Story: [STORY_ID]
+  Step: [STEP_NUMBER]/8 - [step name]
+  Files: docs/stories/[STORY_ID]-*.md, .context.xml
   Status: [sprint-status.yaml value]
 
   ## Work Done
@@ -88,9 +88,9 @@ Sharded epics are numberedin docs/epics folder - epic-x-*.md. Execute Epic [EPIC
   - path/to/file - [what changed]
 
   ## Tests
-  - Unit: [X]/[X] passing ([%]%)
-  - Integration: [Y]/[Y] passing
-  - Coverage: [Z]%
+  - Unit: [PASSING]/[TOTAL] passing ([PERCENTAGE]%)
+  - Integration: [PASSING]/[TOTAL] passing
+  - Coverage: [PERCENTAGE]%
 
   ## Issues Fixed
   - [Issue]: [resolution]
@@ -105,22 +105,22 @@ Sharded epics are numberedin docs/epics folder - epic-x-*.md. Execute Epic [EPIC
   ## Technical Debt
   - [Item - defer to story X]
 
-  After handoff: Tell me "Handoff saved to docs/handoff/epic[N]_handoff.md. Resume with: Resume Epic [N] from handoff"
+  After handoff: Tell me "Handoff saved to docs/handoff/epic[EPIC_ID]_handoff.md. Resume with: Resume Epic [EPIC_ID] from handoff"
 
-  RECOVERY (when I say "Resume Epic [N] from handoff"):
-  1. Read docs/handoff/epic[N]_handoff.md (most recent session)
+  RECOVERY (when I say "Resume Epic [EPIC_ID] from handoff"):
+  1. Read docs/handoff/epic[EPIC_ID]_handoff.md (most recent session)
   2. Read docs/sprint-status.yaml
   3. Read current story file and context XML
   4. Execute "Next Action" from handoff
   5. Continue workflow
-  6. Report: "Recovered. Resuming Story [ID] step [N]/8. Continuing..."
+  6. Report: "Recovered. Resuming Story [STORY_ID] step [STEP_NUMBER]/8. Continuing..."
 
   PROGRESS REPORTING:
   After each story:
-  ✅ Story [ID] done
-  Progress: [X/Y] stories ([Z]%)
-  Token Usage: [used]/200k
-  Next: Story [NEXT_ID]
+  ✅ Story [STORY_ID] done
+  Progress: [COMPLETED_COUNT]/[TOTAL_STORIES] stories ([PERCENTAGE]%)
+  Token Usage: [CURRENT_TOKENS]/200k
+  Next: Story [NEXT_STORY_ID]
 
   ⚠️ CRITICAL: After reporting progress, IMMEDIATELY start the next story. DO NOT wait for user input. DO NOT pause. Continue autonomously.
 
@@ -128,8 +128,8 @@ Sharded epics are numberedin docs/epics folder - epic-x-*.md. Execute Epic [EPIC
 
   Epic Validation Guide (REQUIRED before marking epic complete)
      - ⚠️ BLOCKER: Must create epic validation guide before celebrating completion
-      - Read all per-story validation guides: docs/validation/epic[N]_*_validation.md
-      - Synthesize into docs/validation/epic[N]_validation.md with:
+      - Read all per-story validation guides: docs/validation/epic[EPIC_ID]_*_validation.md
+      - Synthesize into docs/validation/epic[EPIC_ID]_validation.md with:
          * Epic Overview
             - Complete user journey across all stories
             - Integration points and dependencies
@@ -141,17 +141,17 @@ Sharded epics are numberedin docs/epics folder - epic-x-*.md. Execute Epic [EPIC
          * Reference: Links to detailed per-story validation guides
 
   After epic validation guide is created:
-  🎉 EPIC [N] COMPLETE
+  🎉 EPIC [EPIC_ID] COMPLETE
 
-  Stories: [Y/Y] ✓
-  Files Modified: [count]
-  Tests Added: [count]
-  Coverage: [avg %]
-  Validation Guides: docs/validation/epic[N]_*.md
-  Handoff: docs/handoff/epic[N]_handoff.md
+  Stories: [TOTAL_STORIES]/[TOTAL_STORIES] ✓
+  Files Modified: [COUNT]
+  Tests Added: [COUNT]
+  Coverage: [AVERAGE_PERCENTAGE]%
+  Validation Guides: docs/validation/epic[EPIC_ID]_*.md
+  Handoff: docs/handoff/epic[EPIC_ID]_handoff.md
 
   Technical Debt: [list or none]
-  Ready for Epic [N+1]
+  Ready for next epic
 
   Begin with Story [FIRST_STORY_ID].
 
@@ -159,6 +159,6 @@ Sharded epics are numberedin docs/epics folder - epic-x-*.md. Execute Epic [EPIC
 
   ## Recovery Prompt:
 
-  Resume Epic [N] from handoff
+  Resume Epic [EPIC_ID] from handoff
 
   ---
