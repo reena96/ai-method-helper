@@ -130,6 +130,11 @@ To continue from a handoff:
 Resume Epic [EPIC_ID] from handoff using epic-prompt.md
 ```
 
+**How recovery works:**
+- The epic-prompt.md file contains a RECOVERY section that defines what "from handoff" means
+- When you use this phrase, the AI reads the prompt and follows the recovery instructions
+- The prompt is self-documenting - it defines its own recovery behavior
+
 The workflow will:
 1. Read the most recent handoff file
 2. Load sprint status and current story context
