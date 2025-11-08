@@ -34,7 +34,9 @@ ai-method-helper/
 │   └── prompts/
 │       └── epic-prompt/   # Epic execution workflow
 ├── taskmaster-helper/     # TaskMaster-specific workflows (example)
-├── cursor-helper/         # Cursor-specific workflows (example)
+├── cursor-helper/         # Cursor IDE-specific workflows (example)
+├── claude-helper/         # Claude Code-specific workflows (example)
+├── codex-helper/          # GitHub Copilot/Codex workflows (example)
 ├── generic-helper/        # Tool-agnostic methods (example)
 └── README.md             # This file
 ```
@@ -78,8 +80,9 @@ We welcome contributions! Here's how you can add your own helpers:
 
 4. **Update this root README** to include your helper in the "Current Helpers" section
 
-### Example: Adding a TaskMaster Helper
+### Examples: Adding Different Types of Helpers
 
+**Tool-specific helper (TaskMaster):**
 ```
 taskmaster-helper/
 ├── README.md
@@ -88,6 +91,51 @@ taskmaster-helper/
 │   └── progress-tracking.md
 └── examples/
     └── sample-project.md
+```
+
+**Tool-specific helper (Cursor IDE):**
+```
+cursor-helper/
+├── README.md
+├── workflows/
+│   ├── refactoring-patterns.md
+│   └── test-generation.md
+└── keybindings/
+    └── custom-shortcuts.json
+```
+
+**Tool-specific helper (Claude Code):**
+```
+claude-helper/
+├── README.md
+├── prompts/
+│   ├── code-review-prompts.md
+│   └── debugging-strategies.md
+└── examples/
+    └── pr-review-flow.md
+```
+
+**Tool-specific helper (GitHub Copilot/Codex):**
+```
+codex-helper/
+├── README.md
+├── comment-patterns/
+│   ├── function-generation.md
+│   └── test-templates.md
+└── workflows/
+    └── context-optimization.md
+```
+
+**Tool-agnostic helper:**
+```
+generic-helper/
+├── README.md
+├── methods/
+│   ├── prompt-engineering-patterns.md
+│   ├── error-handling-strategies.md
+│   └── documentation-templates.md
+└── examples/
+    └── universal-workflows.md
 ```
 
 ### Contribution Guidelines
