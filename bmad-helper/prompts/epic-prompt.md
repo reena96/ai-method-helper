@@ -1,5 +1,7 @@
-Checkout a branch off of main for this epic and name the branch the same name as the epic. 
+Checkout a branch off of main for this epic and name the branch the same name as the epic.
 Sharded epics are numberedin docs/epics folder - epic-x-*.md. Execute Epic [EPIC_NUMBER] autonomously until complete. Handle all standard issues automatically. Only interrupt for critical blockers.
+
+⚠️ AUTONOMOUS MODE: Work continuously through ALL stories without stopping between them. Report progress after each story but IMMEDIATELY continue to the next. DO NOT wait for user confirmation after story completion.
 
   EPIC: Epic [EPIC_NUMBER] - [EPIC_NAME]
   SPRINT STATUS: docs/sprint-status.yaml
@@ -50,6 +52,7 @@ Sharded epics are numberedin docs/epics folder - epic-x-*.md. Execute Epic [EPIC
      - Update sprint-status.yaml: review → done
      - Report: Story [STORY_ID] complete | Files: [list] | Tests: [pass/fail] | Coverage: [%] | Progress: [X/Y]
      - Commit relevant changes to the branch locally.
+     - ⚠️ DO NOT STOP. DO NOT ASK FOR CONFIRMATION. Immediately proceed to next story.
 
   AUTO-FIX WITHOUT ASKING:
   - Linting/formatting errors
@@ -118,6 +121,8 @@ Sharded epics are numberedin docs/epics folder - epic-x-*.md. Execute Epic [EPIC
   Progress: [X/Y] stories ([Z]%)
   Token Usage: [used]/200k
   Next: Story [NEXT_ID]
+
+  ⚠️ CRITICAL: After reporting progress, IMMEDIATELY start the next story. DO NOT wait for user input. DO NOT pause. Continue autonomously.
 
   COMPLETION (when all stories done):
 
