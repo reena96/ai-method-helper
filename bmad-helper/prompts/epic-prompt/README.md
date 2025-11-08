@@ -7,7 +7,7 @@ The epic workflow prompt (`bmad-helper/prompts/epic-prompt.md`) is an autonomous
 To execute an epic, provide the epic ID and prompt file:
 
 ```
-Execute Epic [EPIC_ID] using epic-prompt.md
+Execute Epic [EPIC_ID] following epic-prompt.md
 ```
 
 **That's it!** The workflow will automatically:
