@@ -105,9 +105,9 @@ Sharded epics are numbered in docs/epics folder - epic-[EPIC_ID]-*.md. Execute E
   ## Technical Debt
   - [Item - defer to story X]
 
-  After handoff: Tell me "Handoff saved to docs/handoff/epic[EPIC_ID]_handoff.md. Resume with: Resume Epic [EPIC_ID] from handoff"
+  After handoff: Tell me "Handoff saved to docs/handoff/epic[EPIC_ID]_handoff.md. Resume with: Resume Epic [EPIC_ID] from handoff using epic-prompt.md"
 
-  RECOVERY (when I say "Resume Epic [EPIC_ID] from handoff"):
+  RECOVERY (when I say "Resume Epic [EPIC_ID] from handoff using epic-prompt.md"):
   1. Read docs/handoff/epic[EPIC_ID]_handoff.md (most recent session)
   2. Read docs/sprint-status.yaml
   3. Read current story file and context XML
@@ -159,6 +159,6 @@ Sharded epics are numbered in docs/epics folder - epic-[EPIC_ID]-*.md. Execute E
 
   ## Recovery Prompt:
 
-  Resume Epic [EPIC_ID] from handoff
+  Resume Epic [EPIC_ID] from handoff using epic-prompt.md
 
   ---
