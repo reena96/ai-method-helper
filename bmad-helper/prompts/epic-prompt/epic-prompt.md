@@ -1,4 +1,4 @@
-Checkout a branch off of main for this epic and name the branch: epic-[EPIC_ID]-[EPIC_NAME]
+Checkout a branch off of main for this epic and name the branch: epic-[EPIC_ID]-[EPIC_NAME].
 Sharded epics are numbered in docs/epics folder - epic-[EPIC_ID]-*.md. Execute Epic [EPIC_ID] autonomously until complete. Handle all standard issues automatically. Only interrupt for critical blockers.
 
 ⚠️ AUTONOMOUS MODE: Work continuously through ALL stories without stopping between them. Report progress after each story but IMMEDIATELY continue to the next. DO NOT wait for user confirmation after story completion.
@@ -54,11 +54,11 @@ Sharded epics are numbered in docs/epics folder - epic-[EPIC_ID]-*.md. Execute E
      - Commit relevant changes to the branch locally.
      - ⚠️ DO NOT STOP. DO NOT ASK FOR CONFIRMATION. Immediately proceed to next story.
 
-  AUTO-FIX WITHOUT ASKING:
+  AUTO-FIX WITHOUT ASKING: (retry up to 3x times)
   - Linting/formatting errors
   - Missing imports
   - Type errors
-  - Flaky tests (retry 3x)
+  - Flaky tests
   - Common file/path issues
 
   AUTO-COMPACTION:
