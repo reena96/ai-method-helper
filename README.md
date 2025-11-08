@@ -25,6 +25,16 @@ This repository contains:
 - **Tool-agnostic methods** - Universal approaches that work across different AI assistants
 - **Prompts and templates** - Reusable prompt engineering patterns
 - **Workflow documentation** - Step-by-step processes that have proven effective
+- **Automation scripts** - Helper scripts that streamline AI-assisted workflows
+- **Configuration files** - Optimized settings, keybindings, and tool configurations
+- **Prompt libraries** - Collections of effective prompts for specific tasks
+- **Integration patterns** - Ways to combine multiple AI tools effectively
+- **Troubleshooting guides** - Solutions to common issues and edge cases
+- **Performance optimizations** - Techniques to get better/faster results from AI tools
+- **Case studies** - Real-world examples with before/after comparisons
+- **Anti-patterns** - Things that don't work well (equally valuable!)
+- **Methodology frameworks** - Structured approaches like BMAD
+- **Best practices** - Lessons learned from practical usage
 
 ## 🗂️ Structure
 
